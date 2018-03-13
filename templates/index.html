@@ -1,0 +1,290 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <title>Chessboard using Pure CSS and HTML</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .chessboard {
+            width: 600;
+            height: 600px;
+            margin: 0px;
+            border: 5px solid #333;
+        }
+
+        .black {
+            color: black !important;
+        }
+
+        .white {
+            color: white !important;
+        }
+
+        .transparent {
+            color: transparent !important;
+        }
+
+        #checkBoardTable {
+            background-color: rgb(8, 173, 96);
+            width: 86.6vh;
+            height: 86.6vh;
+        }
+
+        .row {
+            display: block;
+        }
+
+
+        .squares {
+
+            font-size: 5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            width: 9vh;
+            height: 9.09vh;
+            border: 1px solid white;
+        }
+
+
+        .names {
+
+font-size: 5em;
+display: flex;
+justify-content: center;
+align-items: center;
+float: left;
+width: 8vh;
+height: 8.09vh;
+border: 1px solid white;
+}
+    </style>
+    <!-- $('#xyz').css('color','red !important') -->
+
+    <!-- $('#xyz').removeClass('black')
+    $('#xyz').addClass('red') -->
+    
+</head>
+
+<body style="background-color:rgb(238, 238, 238);">
+    
+        <div id="checkBoardTable">
+            <!-- 1st row -->
+            
+            <div class="row">
+                    <div class="squares black"></div>
+                    <div class="squares black">A</div>
+                    <div class="squares black">B</div>
+                    <div class="squares black">C</div>
+                    <div class="squares black">D</div>
+                    <div class="squares black">E</div>
+                    <div class="squares black">F</div>
+                    <div class="squares black">G</div>
+                    <div class="squares black">H</div>
+                </div>
+            <div class="row">
+                    <div class="squares " >1</div>
+                <div class="squares transparent" id="1">&#9679;</div>
+                <div class="squares white" id="2">&#9679;</div>
+                <div class="squares transparent" id="3">&#9679;</div>
+                <div class="squares transparent" id="4">&#9679;</div>
+                <div class="squares transparent" id="5">&#9679;</div>
+                <div class="squares transparent" id="6">&#9679;</div>
+                <div class="squares transparent" id="7">&#9679;</div>
+                <div class="squares transparent" id="8">&#9679;</div>
+            </div>
+
+            <div class="row">
+                
+                    <div class="squares " >2</div>
+                <div class="squares transparent" id="9">&#9679;</div>
+                <div class="squares white" id="10">&#9679;</div>
+                <div class="squares transparent" id="11">&#9679;</div>
+                <div class="squares transparent" id="12">&#9679;</div>
+                <div class="squares transparent" id="13">&#9679;</div>
+                <div class="squares transparent" id="14">&#9679;</div>
+                <div class="squares transparent" id="15">&#9679;</div>
+                <div class="squares transparent" id="16">&#9679;</div>
+            </div>
+            <div class="row">
+                    <div class="squares " >3</div>
+                <div class="squares transparent" id="17">&#9679;</div>
+                <div class="squares transparent" id="18">&#9679;</div>
+                <div class="squares transparent" id="19">&#9679;</div>
+                <div class="squares transparent" id="20">&#9679;</div>
+                <div class="squares transparent" id="21">&#9679;</div>
+                <div class="squares transparent" id="22">&#9679;</div>
+                <div class="squares transparent" id="23">&#9679;</div>
+                <div class="squares transparent" id="24">&#9679;</div>
+            </div>
+            <div class="row">
+                    <div class="squares " >4</div>
+                <div class="squares transparent" id="25">&#9679;</div>
+                <div class="squares transparent" id="26">&#9679;</div>
+                <div class="squares transparent" id="27">&#9679;</div>
+                <div class="squares transparent" id="28">&#9679;</div>
+                <div class="squares transparent" id="29">&#9679;</div>
+                <div class="squares transparent" id="30">&#9679;</div>
+                <div class="squares transparent" id="31">&#9679;</div>
+                <div class="squares transparent" id="32">&#9679;</div>
+            </div>
+            <div class="row">
+                    <div class="squares " >5</div>
+                <div class="squares transparent" id="33">&#9679;</div>
+                <div class="squares transparent" id="34">&#9679;</div>
+                <div class="squares transparent" id="35">&#9679;</div>
+                <div class="squares transparent" id="36">&#9679;</div>
+                <div class="squares transparent" id="37">&#9679;</div>
+                <div class="squares transparent" id="38">&#9679;</div>
+                <div class="squares transparent" id="39">&#9679;</div>
+                <div class="squares transparent" id="40">&#9679;</div>
+            </div>
+            <div class="row">
+                    <div class="squares " >6</div>
+                    <div class="squares transparent" id="41">&#9679;</div>
+                    <div class="squares transparent" id="42">&#9679;</div>
+                    <div class="squares transparent" id="43">&#9679;</div>
+                    <div class="squares transparent" id="44">&#9679;</div>
+                    <div class="squares transparent" id="45">&#9679;</div>
+                    <div class="squares transparent" id="46">&#9679;</div>
+                    <div class="squares transparent" id="47">&#9679;</div>
+                    <div class="squares transparent" id="48">&#9679;</div>
+                </div>
+            <div class="row">
+                    <div class="squares " >7</div>
+                <div class="squares black" id="49">&#9679;</div>
+                <div class="squares white" id="50">&#9679;</div>
+                <div class="squares transparent" id="51">&#9679;</div>
+                <div class="squares transparent" id="52">&#9679;</div>
+                <div class="squares transparent" id="53">&#9679;</div>
+                <div class="squares transparent" id="54">&#9679;</div>
+                <div class="squares transparent" id="55">&#9679;</div>
+                <div class="squares transparent" id="56">&#9679;</div>
+            </div>
+            <div class="row">
+                    <div class="squares " >8</div>
+                <div class="squares transparent" id="57">&#9679;</div>
+                <div class="squares white" id="58">&#9679;</div>
+                <div class="squares transparent" id="59">&#9679;</div>
+                <div class="squares transparent" id="60">&#9679;</div>
+                <div class="squares transparent" id="61">&#9679;</div>
+                <div class="squares transparent" id="62">&#9679;</div>
+                <div class="squares transparent" id="63">&#9679;</div>
+                <div class="squares transparent" id="64">&#9679;</div>
+            </div>
+            
+
+        </div>
+        <!--<button type="button" id="dataExtract">Get Data</button>-->
+        <div>
+        <div>    <canvas class="myChart"></canvas></div><br>
+        <div>    <canvas class="myChart"></canvas></div>
+        <div>    <canvas class="myChart"></canvas></div>
+        <div>    <canvas class="myChart"></canvas></div>
+    </div>
+
+    
+
+
+
+</body>
+<script>
+    var rc ,ac
+        function changeBoard(idx,removeCl,changeCl){
+           
+
+            switch(changeCl){
+                case 0:
+                    ac = "black" 
+                    break;
+                case 1:
+                    ac = "white"
+                    break;
+                case 2:
+                    ac = "transparent"
+                    break
+
+            }
+            $('#'+idx).removeClass(removeCl)
+            $('#'+idx).addClass(ac) 
+            
+            }
+            
+        
+        
+        var d
+       
+
+
+            function refresh(){
+                $.ajax({
+                url: '/move',
+                method: 'POST',
+                success: function(res) {
+                    d = res
+                    pos = d['board']
+                    for (i = 1; i < pos.length+1; i++) { 
+                        var cls = $('#'+ i).attr('class')
+                        toChange = cls.split(" ")[1]
+
+                        changeBoard(i,toChange,parseInt(pos[i-1]))
+                        
+}
+                    
+                    
+                    
+                },
+                
+
+            })
+            }
+            
+            
+        
+function donot(){
+var ctx = $(".myChart");
+var options = {
+}
+
+var value = 60
+var rest = 180 - value
+
+var data = {
+    labels: [
+    ],
+    datasets: [
+        {
+            data: [value, rest],
+            backgroundColor: [
+                "#FF6384"
+            ]
+        }]
+};
+
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+});
+
+}
+    
+(function better(){
+
+
+ refresh()
+ donot()
+setTimeout(better, 2000);
+})();
+
+    </script>
+
+</html>
